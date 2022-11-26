@@ -61,6 +61,7 @@ module.exports = {
         '100' : '100px',
         '113' : '113px',
       },
+
       gridTemplateColumns: {
         '3_3': 'repeat(3, 1fr)',
       }
