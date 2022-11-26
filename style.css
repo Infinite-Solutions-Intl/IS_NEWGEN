@@ -11,10 +11,6 @@
         padding-right: 24px;
     }
 
-    .hero-svg {
-        height: theme('height.screen');
-    }
-
     .hamburger::before {
         content: '';
         position:absolute;
@@ -37,31 +33,62 @@
         transition:0.5s;
     }
 
-    .menu {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        text-align: center;
-        opacity: 0;
-        overflow: hidden;
-        transform: translateY(-100%);
-        transition: all .7s ease-in-out;
+    .icon.active hamburger::before {
+        transform: rotate(45deg);
+        transition: all 1.5s ease-in;
     }
 
-    .menu.active {
-        transform: translateY(83px);
-        transition: .4s all ease;
-        /*animation: showMenu .5s ease-in-out forwards;*/
+    .icon.active hamburger::after {
+        transform: rotate(135deg);
+        transition: all 1.5s ease-in;
+    }
+
+    .desktop-list-item {
+        padding: 1rem .5rem;
+        color: theme('colors.black_200');
+        font-family: theme('fontFamily.headings');
+        font-size: 16px;
+        font-weight: 400;
+        transition: all .5s ease-in;
+    }
+
+    .desktop-list-item:hover, .desktop-list-item.active {
+        color: theme('colors.green_50');
+        transition: all 1.5s ease-in;
+        transition-duration: 500ms;
+    }
+
+    .mobile-list-item {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        top: 0;
+        line-height: 45px;
+        transition: all .5s;
+    }
+
+    .mobile-list-item.active {
+        width: 100%;
+        height: 90vh;
+        top: 87px;
         opacity: 1;
     }
 
-    li {
-        height: auto;
-        font-family: theme('fontFamily.headings'), serif;
-        font-size: 20px;
+    .mobile-list-item a {
         color: theme('colors.white');
-        padding: 10px 0;
+        font-family: theme('fontFamily.headings');
+        text-transform: uppercase;
+        display: block;
+        font-size: 13px;
+        padding: 5px 0px;
+        transition: all .5s ease-in;
+    }
+
+    .mobile-list-item a:hover, .mobile-list-item a.active {
+        color: theme('colors.green_50');
+        transition: all 1.5s ease-in;
+        transition-duration: 300ms;
     }
     /* Navbar section ends here */
 
@@ -71,14 +98,23 @@
         font-size: 15px;
         letter-spacing: .5rem;
         margin-bottom: 24px;
-        color: theme('colors.green_100');
         font-family: theme('fontFamily.highlight');
+        text-transform: uppercase;
     }
-    .headline-text {
+
+    .headline, .headline-text {
         font-family: theme('fontFamily.headings'), Serif;
         font-weight: 600;
         font-size: 36px;
-        color: theme('colors.gray_800');
+        line-height: 52px;
+        margin-bottom: 70px;
+        position: relative;
+    }
+
+    .head-title {
+        font-family: theme('fontFamily.headings'), Serif;
+        font-weight: 600;
+        font-size: 55px;
         line-height: 52px;
         margin-bottom: 70px;
         position: relative;
@@ -90,33 +126,24 @@
         position: relative;
     }
 
-    .headline-text::after {
+    .headline::after, .head-title::after {
         content: "";
         position: absolute;
         width: 9px;
         height: 9px;
-        bottom: 14px;
+        bottom: 12px;
+        right: -12px;
         background-color: theme('colors.green_100');
     }
     /*  Hero sections ends here */
 
     /* section 1 starts here */
-
     /* section 1 ends here */
-
-    @keyframes showMenu {
-        0% {
-            transform: translate(0px, -100vh);
-        }
-        100% {
-            transform: translate(0px, 0vh);
-        }
-    }
 
     @media (min-width: 768px) {
         .width {
-            padding-left: 64px;
-            padding-right: 64px;
+            padding-left: 44px;
+            padding-right: 44px;
         }
 
         .menu.active {
@@ -126,8 +153,8 @@
 
     @media (min-width: 1024px) {
         .width {
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 64px;
+            padding-right: 64px;
         }
     }
 }

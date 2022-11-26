@@ -5,49 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
 
-    <title>Title</title>
+    <title>Infinite Solutions</title>
 </head>
 <body>
 <!-- Navbar starts here -->
-    <nav class="width py-17 relative flex justify-between items-center bg-gray_300 md:px-64 md:py-26 lg:px-100 z-20">
-        <img src="./assets/nav_logo.svg" alt="logo de l'entreprise" class="lg:w-[76.6px] lg:h-[34px]">
-        <span class="w-53 h-53 relative rounded-full border border-gray_50 hamburger z-20" id="hamburger"></span>
-        <ul id="menu" class="menu bg-blue lg:flex z-[-50]">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Formations</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Nos realisations</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">A propos</a></li>
-        </ul>
-        <a href="#" class="hidden">Contacter Nous</a>
-    </nav>
-    <!-- Navbar ends here-->
-
-    <!-- Hero section start here-->
-    <header class="relative h-screen w-full bg-[#021033] flex flex-col justify-center">
-            <div class="hero-svg absolute w-full top-0 right-0">
-                <img class="absolute right-0" src="assets/hero%20green%20vector.svg">
-                <img class="relative w-full h-full top-0" src="assets/hero%20vector.svg">
-            </div>
-    <!-- the wrapper content for the body -->
-            <div class="wrapper">
-                <div>
-                    <div class="highlight">A PLACE WHERE</div>
-                    <h1 class="headline-text relative text-gray_800">we focus on <br> building <br> website and <br> app that suites <br> your business</h1>
-                    <div class="flex items-center">
-                        <img class="relative" src="./assets/hero%20ellipse.svg">
-                        <span class="absolute font-headings font-semibold text-[20px] text-gray_400 left-[26px]">Get in Touch</span>
+    <header>
+        <nav class="h-[87px] lg:h-[105px] py-17 lg:py-26 bg-gray_300">
+            <!-- menu primaire -->
+            <div class="px-17 lg:width">
+                <div class="flex justify-between">
+                    <div class="flex space-x-7">
+                        <div>
+                            <!-- Website Logo -->
+                            <a href="#" class="flex items-center py-4 px-2">
+                                <img src="./assets/nav_logo.svg" alt="logo de l'entreprise" class="w-[50px] lg:w-[76.6px] lg:h-[34px]">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="" class="desktop-list-item active">Accueil</a>
+                        <a href="" class="desktop-list-item">Formations</a>
+                        <a href="" class="desktop-list-item">Services</a>
+                        <a href="" class="desktop-list-item">Nos realisations</a>
+                        <a href="" class="desktop-list-item">Blog</a>
+                        <a href="" class="desktop-list-item">A propos</a>
+                    </div>
+                    <div class="hidden lg:flex items-center space-x-3 ">
+                        <a href="" class="py-17 px-[24px] font-normal text-gray_800 bg-green_100 hover:bg-gray_800 hover:text-green_100 transition duration-300">Contacter Nous</a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <div class="lg:hidden flex items-center icon" id="ham-icon">
+                        <span class="w-53 h-53 relative rounded-full border border-gray_50 cursor-pointer hamburger lg:hidden z-20" id="hamburger"></span>
                     </div>
                 </div>
             </div>
+            <!-- mobile menu -->
+            <div class="w-full mobile-menu">
+                <ul class="bg-blue lg:bg-none float-right text-center lg:text-right transition-all delay-500 lg:transition-none mt-17 lg:none mobile-list-item" id="menu">
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Formations</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Nos realisations</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">A propos</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+<!-- Navbar ends here-->
 
+<!-- Hero section start here-->
+    <!--<section class="bg-blue h-screen">
+        <div class="max-[90%] my-auto">
+            <div class="">
+                <div class="highlight">
+                    A PLACE WHERE
+                </div>
+                <h1 class="headline-text">
+                    we focus on <br> building <br> website and <br> app that suites <br> your business
+                </h1>
+                <div>
+                    <img class="relative" src="./assets/hero_ellipse.svg">
+                    <span class="absolute font-headings font-semibold text-[20px] text-gray_400 left-[26px]">Get in Touch</span>
+                </div>
+            </div>
+        </div>
+    </section>-->
     <main>
-        <section class="width section_1 my-[48px]">
+        <section>
+            <div class="relative h-screen w-full bg-blue flex flex-col justify-center">
+                <div class="hero-svg absolute w-full top-0 right-0">
+                    <img class="absolute right-0" src="assets/hero_green_vector.svg">
+                    <img class="relative w-full h-screen top-0" src="assets/hero_vector.svg">
+                </div>
+                <div>
+                    <div class="width mx-auto">
+                        <div class="highlight text-green_100">A PLACE WHERE</div>
+                        <h1 class="headline relative text-gray_800">we focus on building website and <br> app that suites your business</h1>
+                        <div class="relative flex items-center">
+                            <img src="./assets/hero_ellipse.svg">
+                            <span class="absolute font-headings font-semibold text-[20px] text-gray_400 left-26">Get in Touch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="width my-[48px]">
             <div>
                 <div>
-                    <div class="highlight">A DIGITAL AGENCY</div>
+                    <div class="highlight text-green_100">A DIGITAL AGENCY</div>
                     <h2 class="headline-title text-black_200 text-[36px] leading-[52px] font-semibold">Building great websites for industry-leading clients.</h2>
                     <p class="headline-title text-gray_200 text-[15px] font-normal">Our customers are satisfied with the quality of our services. Below are the latest services performed and delivered for our customers.</p>
                     <div class="cards">
@@ -57,15 +104,15 @@
             </div>
         </section>
 
-        <section class="width section_2 my-[48px]">
+        <section class="width my-[48px]">
             <div>
                 <div>
-                    <div class="highlight">WHAT WE DO</div>
+                    <div class="highlight text-green_100">WHAT WE DO</div>
                     <h2 class="headline-title text-black_200 text-[36px] leading-[52px] font-semibold">360 of digital service expertise</h2>
-                    <span class="headline-text text-[65px] text-gray_800">CREATIVE</span>
-                    <p class="headline-title text-gray_200 text-[15px] font-normal">we design visualling engaing brand assets to help you drive and increse converstion rates.</p>
-                    <div class="project relative">
-                        <img src="assets/aigle.jpg" class="absolute">
+                    <span class="head-title text-gray_700 md:text-[65px]">CREATIVE</span>
+                    <p class="headline-title text-gray_200 mt-17 text-[15px] font-normal">we design visualling engaing brand assets to help you drive and increse converstion rates.</p>
+                    <div>
+                        <img src="assets/aigle.jpg">
                         <div class="overlay absolute bg-black_100">
                             <span class="text-green_200 font-medium text-[13px]">Logo Project</span>
                             <p class="font-normal text-gray_500 text-[8px]">
@@ -77,11 +124,93 @@
             </div>
         </section>
 
-        <section class="top-[100vh] h-screen w-full bg-gradient-to-r from-green_300 to-green_200 flex flex-col justify-center">
-            <div class="hero-svg absolute w-full top-0 right-0">
+        <section>
+            <div class="relative w-full my-[48px] my-auto bg-gradient-to-r from-green_300 to-green_200 flex flex-col justify-center overflow-hidden">
+                <div class="absolute w-full top-0 right-0">
+                    <img class="absolute right-0" src="assets/green_vector.svg">
+                    <img class="relative w-full h-full top-0" src="assets/vector.svg">
                 </div>
+                <div>
+                    <div class="width mx-auto my-[48px]">
+                        <div class="highlight text-white">A digital agency</div>
+                        <h2 class="headline-text relative text-black_200">We are a creative people with big dreams, new technology all for your projects.</h2>
+                        <div class="relative flex items-center">
+                            <img src="./assets/green_ellipse.svg">
+                            <span class="absolute font-headings font-semibold text-[20px] text-white left-26">Get in Touch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="width">
+                <span class="font-headings font-semibold text-[55px] md:text-[65px] text-black_200">TECHONO</span><br><span class="head-title text-green_300">LOGY</span>
+                <div class="grid grid-cols-3_3 mt-[70px] mb-[48px]">
+                    <div class="w-[93px] h-[93px] md:w-113 md:h-113 bg-gray_600 rounded-full col-start-1 col-end-1 row-start-1 row-end-1"></div>
+                    <div class="w-[70px] h-[70px] md:w-90 md:h-90 bg-gray_600 rounded-full col-start-3 col-end-3 row-start-1 row-end-1"></div>
+                    <div class="w-[93px] h-[93px] md:w-113 md:h-113 bg-gray_600 rounded-full flex justify-self-center col-start-2 col-end-2 row-start-2 row-end-2"></div>
+                    <div class="w-[75px] h-[75px] md:w-95 md:h-95 bg-gray_600 rounded-full col-start-1 col-end-1 row-start-3 row-end-3"></div>
+                    <div class="w-[93px] h-[93px] md:w-113 md:h-113 bg-gray_600 rounded-full col-start-3 col-end-3 row-start-3 row-end-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="font-headings text-[40px] font-normal text-black_200">
+                    Have a project?
+                </h2>
+                <p class="font-headings text-[40px] font-extralight text-black_200">
+                    Let’s talk.
+                </p>
+                <div class="flex justify-center items-center w-[125px] h-[125px] rounded-full bg-gradient-to-r from-[#163E9E] to-[#031541]">
+                    <p class="font-medium texdt-[20px] font-headings text-white rotate-[-30deg]">Contact</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<!--<main>
+    <section class="width section_1 my-[48px]">
+        <div>
+            <div>
+                <div class="highlight">A DIGITAL AGENCY</div>
+                <h2 class="headline-title text-black_200 text-[36px] leading-[52px] font-semibold">Building great websites for industry-leading clients.</h2>
+                <p class="headline-title text-gray_200 text-[15px] font-normal">Our customers are satisfied with the quality of our services. Below are the latest services performed and delivered for our customers.</p>
+                <div class="cards">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="width section_2 my-[48px]">
+        <div>
+            <div>
+                <div class="highlight">WHAT WE DO</div>
+                <h2 class="headline-title text-black_200 text-[36px] leading-[52px] font-semibold">360 of digital service expertise</h2>
+                <span class="headline-text text-[65px] text-gray_800">CREATIVE</span>
+                <p class="headline-title text-gray_200 text-[15px] font-normal">we design visualling engaing brand assets to help you drive and increse converstion rates.</p>
+                <div class="project relative">
+                    <img src="assets/aigle.jpg" class="absolute">
+                    <div class="overlay absolute bg-black_100">
+                        <span class="text-green_200 font-medium text-[13px]">Logo Project</span>
+                        <p class="font-normal text-gray_500 text-[8px]">
+                            Lorem ipsum dolor sit amet, consectetuer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-[100vh] h-screen w-full bg-gradient-to-r from-green_300 to-green_200 flex flex-col justify-center">
+        <div class="hero-svg absolute w-full top-0 right-0">
+            </div>-->
             <!-- the wrapper content for the body -->
-            <div class="wrapper">
+            <!--<div class="wrapper">
                 <div>
                     <div class="highlight">A PLACE WHERE</div>
                     <h1 class="headline-text relative text-gray_800">we focus on <br> building <br> website and <br> app that suites <br> your business</h1>
@@ -92,7 +221,12 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main>-->
+<!-- Hero section ends here-->
+
+<!-- Footer section starts here-->
+
+<!-- Footer section ends here-->
 
     <script type="text/javascript" src="./public/index.js"></script>
 </body>

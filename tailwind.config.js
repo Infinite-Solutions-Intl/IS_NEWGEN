@@ -17,7 +17,7 @@ module.exports = {
 
       blue : "#021033",
 
-      light_50 : "#6FCF97",
+      green_50 : "#6FCF97",
       green_100 : "#27AE60",
       green_200 : "#05972A",
       green_300 : "#05A52E",
@@ -46,13 +46,23 @@ module.exports = {
       '8': '8px',
     },
 
+    maxWidth: {
+      '90': '90%',
+    },
+
     extend: {
       spacing: {
         '17' : '17px',
         '26' : '26px',
         '53' : '53px',
         '64' : '64px',
+        '90' : '90px',
+        '95' : '95px',
         '100' : '100px',
+        '113' : '113px',
+      },
+      gridTemplateColumns: {
+        '3_3': 'repeat(3, 1fr)',
       }
     },
   },
